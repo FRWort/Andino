@@ -4,7 +4,7 @@ const scroll = new LocomotiveScroll ({
     inertia: 0.8,
     smooth: true,
     getDirection: true,
-    mobile: {
+    smartphone: {
       smooth: true,
       inertia: 0.8,
       getDirection: true,
