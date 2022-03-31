@@ -13,9 +13,14 @@
 }
 
 @font-face {
-    font-family: circula-bold;
-    src: url("../fonts/circula.woff");
-}
+    font-family: 'circula';
+    src: url('out.eot'); /* IE9 Compat Modes */
+    src: url('out.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/circula/circula.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/circula/circula.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/circula/circula.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/circula/circula.svg#circula') format('svg'); /* Legacy iOS */
+  }
 
 ul, li {
     list-style-type: none;
