@@ -24,12 +24,15 @@
         max-height: 150px;
     }
 
-    & .text {
+    & .banner_design {
         position: absolute;
         top: 50%;
         right: 50%;
         transform: translate(50%, -50%);
         text-align: center;
+
+        & .logo {
+        }
 
         & h1 {
             display: inline-block;
