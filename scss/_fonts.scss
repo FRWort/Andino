@@ -1,0 +1,51 @@
+/* FONTS */
+
+@import "variables.scss";
+
+@font-face {
+    font-family: elgoc;
+    src: url("../fonts/ElgocMedium.woff");
+}
+
+@font-face {
+    font-family: ttnorms;
+    src: url("../fonts/TTNorms-Regular.otf");
+}
+
+@font-face {
+    font-family: circula-bold;
+    src: url("../fonts/circula.woff");
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a, p {
+    font-family: ttnorms;
+}
+
+p {
+    font-size: $font-size;
+    font-weight: normal;
+    color: $font-pri;
+    line-height: 126%;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: circula;
+    line-height: 100%;
+    color: $font-pri;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    white-space: nowrap;
+}

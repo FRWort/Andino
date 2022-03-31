@@ -1,0 +1,74 @@
+/* POP UP MESSAGE */
+
+#pop-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39, 39, 39, .7);
+    z-index: 10;
+    display: none;
+    pointer-events: none;
+  }
+  
+  .pop-up_message{
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    z-index: 11;
+  }
+  
+  .pop-up_image{
+    background: url(../assets/how2.jpg);
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .pop-up_text{
+    padding: 7% 5%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .pop-up_text h2{
+    font-size: 3vw;
+    padding-bottom: 2.5vh;
+  }
+  
+  .pop-close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 30px;
+    color: var(--accent-color);
+  }
+  
+  .credits{
+    margin-top: 3vh;
+  }
+  
+  .credits p{
+    text-transform: uppercase;
+    padding-bottom: 1vh;
+    font-size: 11px;
+  }
+  
+  .credits a{
+    opacity: .7;
+  }
+  
+  .pop-up_text > a{
+    color: var(--accent-color);
+    text-decoration: underline;
+    margin: 10% 0 20% 0;
+    display: block;
+  }
