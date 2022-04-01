@@ -1,6 +1,6 @@
 /* SITE BLOCKS */
 
-@import "variables.scss";
+@import "variables";
 
 .block-1 {
     width: 100%;
@@ -31,13 +31,16 @@
         transform: translate(50%, -50%);
         text-align: center;
 
-        & .logo {
+        & .text {
+
+            transform: translate(0, -85%) !important;
+
+            & h1 {
+                display: inline-block;
+                color: $font-pri-w;
+            }
         }
 
-        & h1 {
-            display: inline-block;
-            color: $font-pri-w;
-        }
     }
 
 }
@@ -45,12 +48,12 @@
 .block-2 {
     height: 100vh;
 
-    & .text {
-        position: absolute;
-        top: 15%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        text-align: center;
+    & .text-2 {
+        transform: translateX(30%);
+    }
+
+    & h1 {
+
     }
 
     & .outline h1 {
