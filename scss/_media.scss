@@ -1,9 +1,64 @@
 /* MEDIA QUERIES */
 
-// Home video background
-@media (max-aspect-ratio: 16/9) {
-    #home-vid {
-        width: auto;
-        height: 100%;
+@import "variables";
+
+
+// Small screen
+@media screen and (max-width: $small-screen) {
+
+    .block-1 {
+
+        & img {
+            width: 190px!important;
+            height: 190px!important;
+        }
+    }
+
+    h1 {
+        font-size: $font-size-h1-s;
+    }
+}
+
+// Extra small screen
+@media screen and (max-width: $xsmall-screen) {
+
+    .block-2 h1 {
+        font-size: $font-size-h1-xs;
+    }
+}
+
+// Medium screen
+
+
+// Large screen
+@media screen and (min-width: $large-screen) {
+
+    .block-1 {
+
+        & img {
+            width: 280px!important;
+            height: 280px!important;
+        }
+    }
+
+    h1 {
+        font-size: $font-size-h1-l;
+    }
+}
+
+// Extra Large screen
+@media screen and (min-width: $xlarge-screen) {
+
+    
+    .block-1 {
+
+        & img {
+            width: 320px!important;
+            height: 320px!important;
+        }
+    }
+
+    h1 {
+        font-size: $font-size-h1-xl;
     }
 }

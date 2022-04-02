@@ -3,16 +3,6 @@
 @import "variables";
 
 @font-face {
-    font-family: elgoc;
-    src: url("../fonts/ElgocMedium.woff");
-}
-
-@font-face {
-    font-family: ttnorms;
-    src: url("../fonts/TTNorms-Regular.otf");
-}
-
-@font-face {
     font-family: 'circula';
     src: url('out.eot'); /* IE9 Compat Modes */
     src: url('out.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -28,7 +18,6 @@ ul, li {
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 a, p {

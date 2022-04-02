@@ -3,7 +3,6 @@
 @import "variables";
 
 .block-1 {
-    width: 100%;
     height: 100vh;
     background-image:  linear-gradient(60deg, rgba(19, 44, 15, 0.8) 0%, rgba(90, 124, 34, 0.8) 100%), url(../assets/home-bg.jpg);
     background-size: cover;
@@ -11,7 +10,6 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: #fff;
-    z-index: -1;
     animation: animatedBackground 15s linear infinite alternate;
 
     & .waves {
@@ -24,16 +22,34 @@
         max-height: 150px;
     }
 
+    & .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+
     & .banner_design {
         position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        text-align: center;
+        white-space: nowrap;
+
+        & .image { // Shitty locomotive matrix3d solution - (not positioning correctly on reload when two child divs are relative to each other)
+            position: absolute;
+            top: 50%; right: 50%;
+            transform: translate(50%, -90%);
+            filter:  brightness(0) invert(1);
+
+            & img {
+                width: 230px;
+                height: 230px;
+            }
+        }
 
         & .text {
-
-            transform: translate(0, -85%) !important;
+            text-align: center;
 
             & h1 {
                 display: inline-block;
@@ -48,29 +64,14 @@
 .block-2 {
     height: 100vh;
 
-    & .text-2 {
+    & .text-horizontal {
         transform: translateX(30%);
-    }
-
-    & h1 {
-
-    }
-
-    & .outline h1 {
-        -webkit-text-stroke: 0.02em #000; /*#4bbfda*/
-        text-stroke: 1px #000;
-        color: transparent;
-    }
-
-    & .c-info_features {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    & .c-info_features--image img {
-        width: 100%;
-        margin-top: 10vh;
+        
+        & .outline h1 {
+            -webkit-text-stroke: 0.02em #000; /*#4bbfda*/
+            text-stroke: 1px #000;
+            color: transparent;
+        }
     }
 }
 

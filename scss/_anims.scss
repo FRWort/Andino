@@ -17,8 +17,8 @@
   from {
     background-position: 0 0;
   }
-  to {
-    background-position: 50% 0;
+  to { // Bug 2 - If value set to 100% 0% it doesn't move when height is lower than width :(
+    background-position: 100% 100%;
   }
 }
 
