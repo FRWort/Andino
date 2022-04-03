@@ -265,11 +265,13 @@ header {
 header.secondary-nav {
     .base {
         .menu {
+            background-color: rgb(34, 34, 34);
+
             .icon {
                 .bar,
                 &:before,
                 &:after {
-                    background-color: rgb(46, 115, 0);
+                    background-color: #fff;
                 }
             }
         }

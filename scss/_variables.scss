@@ -6,7 +6,7 @@
 $font-pri:            #222222;
 $font-pri-w:          #fff;
 // Base
-$font-size:             2em   !default;
+$font-size:             1.2em   !default;
 // Headings
 $font-size-h1:          5em   !default;
 $font-size-h1-s:        ($font-size-h1 - 1em);
@@ -20,5 +20,6 @@ $font-size-h2:          5em   !default;
 // =============================================================================
 $xsmall-screen:         600px;
 $small-screen:          900px;
+$medium-screen:         1000px;
 $large-screen:          1920px;
 $xlarge-screen:         2400px;

@@ -2,6 +2,8 @@
 
 @import "variables";
 
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@84.5,363;84.5,424;84.5,614&display=swap');
+
 @font-face {
     font-family: 'circula';
     src: url('out.eot'); /* IE9 Compat Modes */
@@ -26,6 +28,7 @@ a, p {
 
 p {
     font-size: $font-size;
+    font-family: 'Anybody', cursive;
     font-weight: normal;
     color: $font-pri;
     line-height: 126%;
