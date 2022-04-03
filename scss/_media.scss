@@ -6,16 +6,25 @@
 // Small screen
 @media screen and (max-width: $small-screen) {
 
+    // Fonts
+    h1 {
+        font-size: $font-size-h1-s;
+    }
+
     .block-1 {
 
-        & img {
+        animation: animatedBackground 50s linear infinite alternate;
+
+        img {
             width: 190px!important;
             height: 190px!important;
         }
     }
 
-    h1 {
-        font-size: $font-size-h1-s;
+    .block-2 {
+        .text-horizontal {
+            transform: translateX(20%);
+        }
     }
 }
 
@@ -33,32 +42,34 @@
 // Large screen
 @media screen and (min-width: $large-screen) {
 
+    // Fonts
+    h1 {
+        font-size: $font-size-h1-l;
+    }
+
     .block-1 {
 
-        & img {
+        img {
             width: 280px!important;
             height: 280px!important;
         }
     }
 
-    h1 {
-        font-size: $font-size-h1-l;
-    }
 }
 
 // Extra Large screen
 @media screen and (min-width: $xlarge-screen) {
 
-    
+    // Fonts
+    h1 {
+        font-size: $font-size-h1-xl;
+    }
+
     .block-1 {
 
-        & img {
+        img {
             width: 320px!important;
             height: 320px!important;
         }
-    }
-
-    h1 {
-        font-size: $font-size-h1-xl;
     }
 }

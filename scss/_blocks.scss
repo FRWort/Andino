@@ -9,10 +9,9 @@
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: #fff;
-    animation: animatedBackground 15s linear infinite alternate;
+    animation: animatedBackground 25s linear infinite alternate;
 
-    & .waves {
+    .waves {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -22,7 +21,7 @@
         max-height: 150px;
     }
 
-    & .container {
+    .container {
         position: relative;
         display: flex;
         align-items: center;
@@ -32,26 +31,26 @@
     }
 
 
-    & .banner_design {
+    .banner_design {
         position: absolute;
         white-space: nowrap;
 
-        & .image { // Shitty locomotive matrix3d solution - (not positioning correctly on reload when two child divs are relative to each other)
+        .image { // Shitty locomotive matrix3d solution - (not positioning correctly on reload when two child divs are relative to each other)
             position: absolute;
             top: 50%; right: 50%;
             transform: translate(50%, -90%);
             filter:  brightness(0) invert(1);
 
-            & img {
+            img {
                 width: 230px;
                 height: 230px;
             }
         }
 
-        & .text {
+        .text {
             text-align: center;
 
-            & h1 {
+            h1 {
                 display: inline-block;
                 color: $font-pri-w;
             }
@@ -64,10 +63,10 @@
 .block-2 {
     height: 100vh;
 
-    & .text-horizontal {
+    .text-horizontal {
         transform: translateX(30%);
         
-        & .outline h1 {
+        .outline h1 {
             -webkit-text-stroke: 0.02em #000; /*#4bbfda*/
             text-stroke: 1px #000;
             color: transparent;

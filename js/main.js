@@ -15,4 +15,22 @@ const scroll = new LocomotiveScroll ({
     },
 });
 
+// Useful function for sticky navbars on locomotive scroll
+const navBar = document.querySelector("header");
+
+  scroll.on("scroll", (position) => {
+    
+    if (position.scroll.y > 500) {
+      navBar.classList.add("secondary-nav");
+    } else {
+      navBar.classList.remove("secondary-nav");
+
+    }
+});
+
+$(".menu").click(function(){
+  $(this).parent().toggleClass("close");
+});
+
+
 console.log('Success');
