@@ -33,9 +33,10 @@ $(".menu").click(function(){
   $(this).parent().toggleClass("close");
 });
 
+/*
 // Fixed with https://bobbyhadz.com/blog/javascript-getboundingclientrect-is-not-a-function
 function isElementVisible(el) {
-  var rect     = el[0].getBoundingClientRect(),
+  var rect     = el.getBoundingClientRect(),
       vWidth   = window.innerWidth || document.documentElement.clientWidth,
       vHeight  = window.innerHeight || document.documentElement.clientHeight,
       efp      = function (x, y) { return document.elementFromPoint(x, y) };     
@@ -47,10 +48,10 @@ function isElementVisible(el) {
 
   // Return true if any of its four corners are visible
   return (
-        el[0].contains(efp(rect.left,  rect.top))
-    ||  el[0].contains(efp(rect.right, rect.top))
-    ||  el[0].contains(efp(rect.right, rect.bottom))
-    ||  el[0].contains(efp(rect.left,  rect.bottom))
+        el.contains(efp(rect.left,  rect.top))
+    ||  el.contains(efp(rect.right, rect.top))
+    ||  el.contains(efp(rect.right, rect.bottom))
+    ||  el.contains(efp(rect.left,  rect.bottom))
   );
 }
 
@@ -58,11 +59,17 @@ const eledetected = document.getElementsByClassName("detect");
 
 // Change on scroll -> Search for other function (when not scrolled, not detected) DOMContentLoaded??
 scroll.on('scroll', (obj) => {
-  if (isElementVisible(eledetected)) {
-    eledetected[0].classList.add("detected");
-    console.log("Added");
-  } else {
-    eledetected[0].classList.remove("detected");
-    console.log("Removed");
+
+  var elements = document.getElementsByClassName("detect");
+  for (i = 0; i < elements.length; i++) {
+    if (isElementVisible(elements[i])) {
+      elements[i].classList.add("detected");
+      console.log("Added");
+    } else {
+      elements[i].classList.remove("detected");
+      console.log("Removed");
+    }
   }
+  
 });
+*/
