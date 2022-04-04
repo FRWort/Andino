@@ -1,6 +1,6 @@
 // Locomotive Scroll
 const scroll = new LocomotiveScroll ({
-    el: document.querySelector('[data-scroll-container]'),
+    el: document.querySelector('#loco-scroll'),
     inertia: 0,
     smooth: true,
     getDirection: true,
@@ -32,6 +32,7 @@ scroll.on("scroll", (position) => {
 $(".menu").click(function(){
   $(this).parent().toggleClass("close");
 });
+// ---------------------------------------------------------
 
 /*
 // Fixed with https://bobbyhadz.com/blog/javascript-getboundingclientrect-is-not-a-function

@@ -12,6 +12,10 @@
         font-size: $font-size-h1-s;
     }
 
+    h2 {
+        font-size: $font-size-h2-s;
+    }
+
     .block-1 {
 
         animation: animatedBackground 50s linear infinite alternate;
@@ -109,6 +113,7 @@
             }
         }
     }
+
 }
 
 
@@ -117,8 +122,28 @@
 // ============================================================
 @media screen and (max-width: $xsmall-screen) {
 
-    .block-2 h1 {
+    // Fonts
+  
+    h1 {
         font-size: $font-size-h1-xs;
+    }
+
+    h2 {
+        font-size: $font-size-h2-xs;
+    }
+
+    .block-1 {
+        h1 {
+            font-size: 4em!important;
+        }
+    }
+
+    .block-3 {
+        .grid .image {
+            img {
+                width: 100% !important;
+            }
+        }
     }
 }
 

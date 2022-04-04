@@ -5,7 +5,7 @@
 .block-1 {
     height: 100vh;
     background-image: linear-gradient(60deg, rgba(19, 44, 15, 0.8) 0%, rgba(90, 124, 34, 0.8) 100%),
-        url(../assets/home-bg.jpg);
+        url(../assets/home-bg.webp);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -86,12 +86,10 @@
             grid-gap: 1rem;
 
             .card_activator_mobile {
-                position: absolute;  
+                position: absolute;
             }
 
-
             .card {
-
                 position: relative;
                 cursor: pointer;
 
@@ -151,7 +149,7 @@
                         box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
                         transform: translateY(-100px);
 
-                        .content {    
+                        .content {
                             width: 100%;
                             word-wrap: break-word;
 
@@ -184,14 +182,218 @@
                     }
                 }
             }
-
         }
-
     }
-
 }
 
 .block-3 {
-    position: relative;
-    height: 150vh;
+    margin-top: 50px;
+    height: auto;
+
+    .reveal {
+        &.is-inview {
+            opacity: 0;
+            animation: fade-in-right ease 2s forwards;
+        }
+
+        .logo {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 15px;
+
+            img {
+                width: 150px;
+                height: auto;
+            }
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .revitaliz {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 350px;
+            height: auto;
+        }
+
+        &.is-inview {
+            .ycVGaCyS_0 {
+                stroke-dasharray: 94 96;
+                stroke-dashoffset: 95;
+                animation: ycVGaCyS_draw 114ms linear 0ms forwards;
+            }
+
+            .ycVGaCyS_1 {
+                stroke-dasharray: 108 110;
+                stroke-dashoffset: 109;
+                animation: ycVGaCyS_draw 131ms linear 114ms forwards;
+            }
+
+            .ycVGaCyS_2 {
+                stroke-dasharray: 256 258;
+                stroke-dashoffset: 257;
+                animation: ycVGaCyS_draw 310ms linear 246ms forwards;
+            }
+
+            .ycVGaCyS_3 {
+                stroke-dasharray: 141 143;
+                stroke-dashoffset: 142;
+                animation: ycVGaCyS_draw 171ms linear 557ms forwards;
+            }
+
+            .ycVGaCyS_4 {
+                stroke-dasharray: 69 71;
+                stroke-dashoffset: 70;
+                animation: ycVGaCyS_draw 84ms linear 729ms forwards;
+            }
+
+            .ycVGaCyS_5 {
+                stroke-dasharray: 67 69;
+                stroke-dashoffset: 68;
+                animation: ycVGaCyS_draw 82ms linear 814ms forwards;
+            }
+
+            .ycVGaCyS_6 {
+                stroke-dasharray: 21 23;
+                stroke-dashoffset: 22;
+                animation: ycVGaCyS_draw 26ms linear 896ms forwards;
+            }
+
+            .ycVGaCyS_7 {
+                stroke-dasharray: 131 133;
+                stroke-dashoffset: 132;
+                animation: ycVGaCyS_draw 159ms linear 923ms forwards;
+            }
+
+            .ycVGaCyS_8 {
+                stroke-dasharray: 119 121;
+                stroke-dashoffset: 120;
+                animation: ycVGaCyS_draw 145ms linear 1082ms forwards;
+            }
+
+            .ycVGaCyS_9 {
+                stroke-dasharray: 92 94;
+                stroke-dashoffset: 93;
+                animation: ycVGaCyS_draw 112ms linear 1228ms forwards;
+            }
+
+            .ycVGaCyS_10 {
+                stroke-dasharray: 71 73;
+                stroke-dashoffset: 72;
+                animation: ycVGaCyS_draw 87ms linear 1340ms forwards;
+            }
+
+            .ycVGaCyS_11 {
+                stroke-dasharray: 19 21;
+                stroke-dashoffset: 20;
+                animation: ycVGaCyS_draw 24ms linear 1427ms forwards;
+            }
+
+            .ycVGaCyS_12 {
+                stroke-dasharray: 332 334;
+                stroke-dashoffset: 333;
+                animation: ycVGaCyS_draw 402ms linear 1451ms forwards;
+            }
+
+            .ycVGaCyS_13 {
+                stroke-dasharray: 119 121;
+                stroke-dashoffset: 120;
+                animation: ycVGaCyS_draw 145ms linear 1854ms forwards;
+            }
+
+            @keyframes ycVGaCyS_draw {
+                100% {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            @keyframes ycVGaCyS_fade {
+                0% {
+                    stroke-opacity: 1;
+                }
+
+                93.54838709677419% {
+                    stroke-opacity: 1;
+                }
+
+                100% {
+                    stroke-opacity: 0;
+                }
+            }
+        }
+    }
+
+    .product {
+        display: flex;
+        justify-content: center;
+
+        .grid {
+            display: grid;
+
+            .image {
+                position: relative;
+                display: flex;
+                justify-content: center;
+
+                &.is-inview {
+                    opacity: 0;
+                    animation: fade-in-right ease 2.5s forwards;
+                }
+
+                img {
+                    width: 70%;
+                    height: auto;
+                }
+            }
+
+            .left {
+                text-align: center;
+
+                .text {
+                    width: 100%;
+                    margin: 0;
+                    padding: 30px 0;
+
+                    h3 {
+                        padding: 0 15px;
+                        color: rgba(128, 128, 128, 0.8);
+                    }
+
+                }
+
+                .text.first.is-inview {
+                    opacity: 0;
+                    animation: fade-in-right-xl ease 2s forwards;
+                }
+
+                .text.second.is-inview {
+                    opacity: 0;
+                    animation: fade-in-left-xl ease 2s forwards;
+                }
+
+                .fa-duotone {
+                    margin-bottom: 20px;
+                    font-size: 5em;
+                    color: $color-pri;
+                }
+            }
+        }
+    }
+}
+
+.block-4 {
+    height: 100vh;
 }

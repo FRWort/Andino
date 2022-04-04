@@ -5,6 +5,8 @@
 // Colors
 $font-pri:            #222222;
 $font-pri-w:          #fff;
+
+$color-pri:           #307e00;
 // Base
 $font-size:             1.2em   !default;
 // Headings
@@ -14,7 +16,11 @@ $font-size-h1-xs:       ($font-size-h1 - 2em);
 $font-size-h1-l:        ($font-size-h1 + 1em);
 $font-size-h1-xl:       ($font-size-h1 + 2em);
 
-$font-size-h2:          5em   !default;
+$font-size-h2:          3em   !default;
+$font-size-h2-s:        ($font-size-h2 - 0.5em);
+$font-size-h2-xs:       ($font-size-h2 - 1em);
+$font-size-h2-l:        ($font-size-h2 + 1em);
+$font-size-h2-xl:       ($font-size-h2 + 2em);
 
 // Breakpoints
 // =============================================================================
