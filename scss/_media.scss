@@ -143,6 +143,20 @@
 
 }
 
+
+// Extra Extra small screen
+// ============================================================
+@media screen and (max-width: $xxsmall-screen) {
+
+    .block-2 {
+        .text-horizontal {
+            h1 {
+                font-size: 2.8em!important;
+            }
+        }
+    }
+}
+
 /*
 @media (min-width: $small-screen) {
 
