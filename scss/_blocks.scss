@@ -31,6 +31,7 @@
     }
 
     .banner_design {
+        will-change: transform, opacity;
         position: absolute;
         white-space: nowrap;
 
@@ -74,6 +75,7 @@
     }
 
     .features {
+        will-change: transform, opacity;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -188,6 +190,7 @@
 .block-3 {
     margin-top: 50px;
     height: auto;
+    will-change: transform, opacity;
 
     .reveal {
         &.is-inview {
