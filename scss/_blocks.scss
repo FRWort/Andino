@@ -345,15 +345,28 @@
                 position: relative;
                 display: flex;
                 justify-content: center;
+                align-items: center;
+
+                .background {
+                    margin: 50px;
+                    padding: 0 50px;
+                    border-radius: 50%;
+                    max-width: 100%;
+                }
+
+                .product-shampoo {
+                    position: absolute;
+                    max-width: 60%;
+                    height: auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
 
                 &.is-inview {
                     opacity: 0;
                     animation: fade-in-right ease 2.5s forwards;
-                }
-
-                img {
-                    width: 70%;
-                    height: auto;
                 }
             }
 
