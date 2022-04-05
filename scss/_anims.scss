@@ -17,29 +17,38 @@
   from {
     background-position: 0 0;
   }
-  to { // Bug 2 - If value set to 100% 0% it doesn't move when height is lower than width :(
-    background-position: 100% 100%;
+  to {
+    background-position: 100% 0;
   }
 }
 
 // Waves
 
 .parallax > use {
+  -webkit-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
 .parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+  -webkit-animation-duration: 7s ;
   animation-delay: -2s;
   animation-duration: 7s;
 }
 .parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+  -webkit-animation-duration: 10s ;
   animation-delay: -3s;
   animation-duration: 10s;
 }
 .parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+  -webkit-animation-duration: 13s ;
   animation-delay: -4s;
   animation-duration: 13s;
 }
 .parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+  -webkit-animation-duration: 20s ;
   animation-delay: -5s;
   animation-duration: 20s;
 }

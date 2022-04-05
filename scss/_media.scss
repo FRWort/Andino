@@ -114,7 +114,12 @@
 
 }
 
-
+@media screen and (min-width: 800px) {
+            .block-1 {
+                -webkit-animation: animatedBackground 25s linear infinite alternate;
+                animation: animatedBackground 25s linear infinite alternate;
+            }
+}
 
 // Extra small screen
 // ============================================================
@@ -157,10 +162,6 @@
 // ============================================================
 @media (min-width: $medium-screen) {
 
-    .block-1 {
-        -webkit-animation: animatedBackground 25s linear infinite alternate;;
-        animation: animatedBackground 25s linear infinite alternate;
-    }
 
     .block-2 {
         .container { grid-template-columns: repeat(3, 1fr); }
