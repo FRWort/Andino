@@ -41,7 +41,7 @@
                 justify-self: start;
     
                 &.is-inview ~ .card.top .face.face1 {
-                    background: #3ea100;
+                    background: $color-pri;
                     transform: translateY(0);
     
                     .content {
@@ -67,7 +67,7 @@
                 height: 0;
     
                 &.is-inview ~ .card.middle .face.face1 {
-                    background: #3ea100;
+                    background: $color-pri;
                     transform: translateY(0);
     
                     .content {
@@ -92,7 +92,7 @@
                 height: 0;
     
                 &.is-inview ~ .card.bottom .face.face1 {
-                    background: #3ea100;
+                    background: $color-pri;
                     transform: translateY(0);
     
                     .content {
@@ -184,7 +184,7 @@
                 height: 0;
     
                 &.is-inview ~ .container .card.middle .face.face1 {
-                    background: #3ea100;
+                    background: $color-pri;
                     transform: translateY(0);
     
                     .content {

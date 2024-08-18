@@ -3,7 +3,7 @@
 @import "variables";
 
 $m: rgb(34,34,34);
-$icon-background: rgb(46, 115, 0);
+$icon-background: $color-pri;
 $iconmargin: 35px;
 
 header {
@@ -82,7 +82,7 @@ header {
               left:0px;
               transition-delay:0.2s;
            }
-           .fa-calendar-o {
+           .fa-address-card {
               top:0px;
               left:0px;
               color:#fff;
@@ -205,7 +205,7 @@ header {
                  top:$iconmargin;
                  left:200px;
               }
-              .fa-calendar-o {
+              .fa-address-card {
                  top:141px;
                  left:141px;
                  color:#fff;
