@@ -2,24 +2,30 @@
 
 @import "variables";
 
+/******************* INDEX CSS STYLE START ********************/
 .block-1 {
     height: 100vh;
-    background-image: linear-gradient(60deg, rgba(75, 0, 107, 0.8) 0%, rgba(13, 0, 26, 0.8) 100%),
+    background-image: linear-gradient(60deg, rgba(75, 0, 107, 0.2) 0%, rgba(13, 0, 26, 0.8) 100%),
         url(../assets/home-bg.webp);
+    // Define the mask-image property with a linear gradient
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    // Include the -webkit- prefix for broader browser compatibility
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 
+    /*
     .waves {
         position: absolute;
         bottom: 0;
         width: 100%;
         height: 15vh;
-        margin-bottom: -7px; /*Fix for safari gap*/
+        margin-bottom: -7px; /*Fix for safari gap
         min-height: 100px;
         max-height: 150px;
-    }
+    }*/
 
     .container {
         position: relative;
@@ -39,7 +45,7 @@
             position: absolute;
             top: 50%;
             right: 50%;
-            transform: translate(50%, -95%);
+            transform: translate(50%, -80%);
             filter: brightness(0) invert(1);
 
             img {
@@ -49,39 +55,37 @@
         }
 
         .text {
-            transform: translate(0%, 75%);
+            transform: translate(0%, 50%);
             will-change: transform;
             text-align: center;
 
-            h1 {
+            h3 {
                 display: inline-block;
-                color: $font-pri-w;
             }
         }
 
-        .text-horizontal {
-            transform: translate(0%, 100%);
-            will-change: transform;
-            text-align: center;
-            opacity: 0.2;
+    }
 
-            h2 {
-                color: $font-pri-w;
-            }
+}
+
+.block-2 {
+    margin-top: 20px;
+    overflow: visible;
+
+    .text-horizontal {
+            transform: translate(0%, 30%);
+            will-change: transform;
+            font-size: 1.5em;
+            text-align: center;
+            opacity: 1;
     
             .outline h2 {
-                -webkit-text-stroke: 0.02em rgb(255, 255, 255); /*#4bbfda*/
+                -webkit-text-stroke: 0.03em $font-sec;
+                /*#4bbfda*/
                 /*text-stroke: 1px #000;*/
                 color: transparent;
             }
         }
-    }
-}
-
-.block-2 {
-    margin-top: 80px;
-    overflow: hidden;
-
     
     .reveal {
         &.is-inview {
@@ -89,431 +93,646 @@
             animation: fade-in-right ease 2s forwards;
         }
 
-        .logo {
-            width: 100%;
-            height: auto;
+        display: flex; /* Makes the container a flex container */
+        justify-content: center; /* Centers items horizontally */
+        align-items: center; /* Centers items vertically */
+        min-height: 100vh; /* Ensures the container takes full viewport height */
+
+        .container { 
             display: flex;
+            background-color: rgb(35, 35, 35);
+            margin: 0 50px;
+            /* Adding a box shadow */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .image-half, .text-half {
+            flex: 1; /* Each takes 50% of the container width */
+        }
+
+        .image-half img {
+            width: 100%;
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        .text-half p {
+            margin: 30px;
+            color: #fff;
+            word-wrap: break-word; /* Allows long words to break and wrap to the next line */
+            overflow-wrap: break-word; /* Similar to word-wrap, but more modern */
+        }
+
+        /* SIGNATURE START - MADE WITH VIVUS INSTANT https://maxwellito.github.io/vivus-instant/*/
+        .signature {
+            display: flex; 
             justify-content: center;
             align-items: center;
-            text-align: center;
-            margin-bottom: 15px;
 
-            img {
-                width: 150px;
+            svg {
+                width: 350px;
                 height: auto;
             }
+
+            &.is-inview {
+                .qdHWNwoi_0 {
+                        stroke-dasharray: 291 293;
+                        stroke-dashoffset: 292;
+                        animation: qdHWNwoi_draw 248ms linear 0ms forwards;
+                    }
+                
+                    .qdHWNwoi_1 {
+                        stroke-dasharray: 184 186;
+                        stroke-dashoffset: 185;
+                        animation: qdHWNwoi_draw 157ms linear 248ms forwards;
+                    }
+                
+                    .qdHWNwoi_2 {
+                        stroke-dasharray: 210 212;
+                        stroke-dashoffset: 211;
+                        animation: qdHWNwoi_draw 179ms linear 405ms forwards;
+                    }
+                
+                    .qdHWNwoi_3 {
+                        stroke-dasharray: 389 391;
+                        stroke-dashoffset: 390;
+                        animation: qdHWNwoi_draw 331ms linear 585ms forwards;
+                    }
+                
+                    .qdHWNwoi_4 {
+                        stroke-dasharray: 83 85;
+                        stroke-dashoffset: 84;
+                        animation: qdHWNwoi_draw 71ms linear 916ms forwards;
+                    }
+                
+                    .qdHWNwoi_5 {
+                        stroke-dasharray: 121 123;
+                        stroke-dashoffset: 122;
+                        animation: qdHWNwoi_draw 103ms linear 988ms forwards;
+                    }
+                
+                    .qdHWNwoi_6 {
+                        stroke-dasharray: 83 85;
+                        stroke-dashoffset: 84;
+                        animation: qdHWNwoi_draw 71ms linear 1091ms forwards;
+                    }
+                
+                    .qdHWNwoi_7 {
+                        stroke-dasharray: 92 94;
+                        stroke-dashoffset: 93;
+                        animation: qdHWNwoi_draw 79ms linear 1163ms forwards;
+                    }
+                
+                    .qdHWNwoi_8 {
+                        stroke-dasharray: 95 97;
+                        stroke-dashoffset: 96;
+                        animation: qdHWNwoi_draw 81ms linear 1242ms forwards;
+                    }
+                
+                    .qdHWNwoi_9 {
+                        stroke-dasharray: 206 208;
+                        stroke-dashoffset: 207;
+                        animation: qdHWNwoi_draw 176ms linear 1323ms forwards;
+                    }
+                
+                    @keyframes qdHWNwoi_draw {
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                
+                    @keyframes qdHWNwoi_fade {
+                        0% {
+                            stroke-opacity: 1;
+                        }
+                
+                        92.98245614035088% {
+                            stroke-opacity: 1;
+                        }
+                
+                        100% {
+                            stroke-opacity: 0;
+                        }
+                    }
+            }
         }
 
-        .text {
+        /* SIGNATURE END - MADE WITH VIVUS INSTANT https://maxwellito.github.io/vivus-instant/ */
+
+        .button-wrapper {
+            margin: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-        }
-    }
 
-    .revitaliz {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        svg {
-            width: 350px;
-            height: auto;
-        }
-
-        &.is-inview {
-            .ycVGaCyS_0 {
-                stroke-dasharray: 94 96;
-                stroke-dashoffset: 95;
-                animation: ycVGaCyS_draw 114ms linear 0ms forwards;
-            }
-
-            .ycVGaCyS_1 {
-                stroke-dasharray: 108 110;
-                stroke-dashoffset: 109;
-                animation: ycVGaCyS_draw 131ms linear 114ms forwards;
-            }
-
-            .ycVGaCyS_2 {
-                stroke-dasharray: 256 258;
-                stroke-dashoffset: 257;
-                animation: ycVGaCyS_draw 310ms linear 246ms forwards;
-            }
-
-            .ycVGaCyS_3 {
-                stroke-dasharray: 141 143;
-                stroke-dashoffset: 142;
-                animation: ycVGaCyS_draw 171ms linear 557ms forwards;
-            }
-
-            .ycVGaCyS_4 {
-                stroke-dasharray: 69 71;
-                stroke-dashoffset: 70;
-                animation: ycVGaCyS_draw 84ms linear 729ms forwards;
-            }
-
-            .ycVGaCyS_5 {
-                stroke-dasharray: 67 69;
-                stroke-dashoffset: 68;
-                animation: ycVGaCyS_draw 82ms linear 814ms forwards;
-            }
-
-            .ycVGaCyS_6 {
-                stroke-dasharray: 21 23;
-                stroke-dashoffset: 22;
-                animation: ycVGaCyS_draw 26ms linear 896ms forwards;
-            }
-
-            .ycVGaCyS_7 {
-                stroke-dasharray: 131 133;
-                stroke-dashoffset: 132;
-                animation: ycVGaCyS_draw 159ms linear 923ms forwards;
-            }
-
-            .ycVGaCyS_8 {
-                stroke-dasharray: 119 121;
-                stroke-dashoffset: 120;
-                animation: ycVGaCyS_draw 145ms linear 1082ms forwards;
-            }
-
-            .ycVGaCyS_9 {
-                stroke-dasharray: 92 94;
-                stroke-dashoffset: 93;
-                animation: ycVGaCyS_draw 112ms linear 1228ms forwards;
-            }
-
-            .ycVGaCyS_10 {
-                stroke-dasharray: 71 73;
-                stroke-dashoffset: 72;
-                animation: ycVGaCyS_draw 87ms linear 1340ms forwards;
-            }
-
-            .ycVGaCyS_11 {
-                stroke-dasharray: 19 21;
-                stroke-dashoffset: 20;
-                animation: ycVGaCyS_draw 24ms linear 1427ms forwards;
-            }
-
-            .ycVGaCyS_12 {
-                stroke-dasharray: 332 334;
-                stroke-dashoffset: 333;
-                animation: ycVGaCyS_draw 402ms linear 1451ms forwards;
-            }
-
-            .ycVGaCyS_13 {
-                stroke-dasharray: 119 121;
-                stroke-dashoffset: 120;
-                animation: ycVGaCyS_draw 145ms linear 1854ms forwards;
-            }
-
-            @keyframes ycVGaCyS_draw {
-                100% {
-                    stroke-dashoffset: 0;
-                }
-            }
-
-            @keyframes ycVGaCyS_fade {
-                0% {
-                    stroke-opacity: 1;
-                }
-
-                93.54838709677419% {
-                    stroke-opacity: 1;
-                }
-
-                100% {
-                    stroke-opacity: 0;
-                }
-            }
-        }
-    }
-
-    .features {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .container {
-            max-width: 1200px;
-            margin: 70px auto;
-            display: grid;
-            grid-gap: 1rem;
-
-            .card_activator_mobile {
-                position: absolute;
-            }
-
-            .card {
-                position: relative;
+            .violet-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(166, 22, 255);
+                /* Or use a specific shade like #8A2BE2 for deeper violet */
+                color: white;
+                /* Text color for contrast */
+                border: none;
+                border-radius: 50%;
+                /* Makes it circular */
+                width: 100px;
+                /* Adjust size as needed */
+                height: 100px;
+                /* Same as width for perfect circle */
+                font-size: 16px;
+                font-weight: bold;
                 cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                /* Subtle shadow */
+                transition: all 0.3s ease;
+                /* Smooth hover transition */
+            }
 
-                .face {
-                    border-radius: 10px;
-                    width: 300px;
-                    height: 200px;
-                    transition: 0.5s;
+            .violet-button:hover {
+                background-color: #7A1FA2;
+                /* Darker violet on hover */
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+                /* Deeper shadow on hover */
+                transform: scale(1.05);
+                /* Slight enlargement for effect */
+            }
 
-                    &.face1 {
-                        position: relative;
-                        background: #333;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        z-index: 1;
-                        transform: translateY(100px);
-
-                        .content {
-                            opacity: 0.2;
-                            transition: 0.5s;
-                            text-align: center;
-
-                            .fa-atom {
-                                font-size: 6em;
-                                color: rgba(255, 255, 255, 1);
-                            }
-
-                            .fa-display-chart-up {
-                                font-size: 6em;
-                                color: rgba(255, 255, 255, 1);
-                            }
-
-                            .fa-pen-ruler {
-                                font-size: 6em;
-                                color: rgba(255, 255, 255, 1);
-                            }
-
-                            h3 {
-                                margin: 10px 0 0;
-                                padding: 0;
-                                color: #fff;
-                                font-size: 1.5em;
-                            }
-                        }
-                    }
-
-                    &.face2 {
-                        position: relative;
-                        background: #fff;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        text-align: center;
-                        padding: 20px;
-                        box-sizing: border-box;
-                        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
-                        transform: translateY(-100px);
-
-                        .content {
-                            width: 100%;
-                            word-wrap: break-word;
-
-                            p {
-                                margin: 0;
-                                padding: 0;
-                                opacity: 0;
-                                transition: 0.6s;
-                            }
-                        }
-                    }
-                }
-
-                &:hover {
-                    .face.face1 {
-                        background: $color-pri;
-                        transform: translateY(0);
-
-                        .content {
-                            opacity: 1;
-                        }
-                    }
-
-                    .face.face2 {
-                        transform: translateY(0);
-
-                        .content p {
-                            opacity: 1;
-                        }
-                    }
-                }
+            .fa-whatsapp {
+                font-size: 3em;
+                color: $font-pri-w;
             }
         }
     }
 }
 
 .block-3 {
-    margin-top: 50px;
     height: auto;
 
-    .product {
+    .container {
         display: flex;
         justify-content: center;
+        align-items: center;
 
-        .grid {
-            .image {
-                position: relative;
-                display: flex;
+        .violet {
+            display: flex;
                 justify-content: center;
                 align-items: center;
+        
+            h1 {
+            color: $font-sec;
+            }
+        }
+    }
 
-                .background {
-                    margin: 50px;
-                    padding: 0 50px;
+        .obras-carousel {
+            position: relative;
+            margin: 30px;
+    
+            h2 {
+                font-size: 35px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .owl-stage-outer {
+                padding: 30px 0;
+                overflow: visible;
+            }
+    
+            .owl-nav {
+                display: none;
+            }
+    
+            .owl-dots {
+                margin-top: 3em;
+                text-align: center;
+    
+                span {
+                    position: relative;
+                    height: 10px;
+                    width: 10px;
                     border-radius: 50%;
-                    max-width: 100%;
+                    display: block;
+                    background: rgb(166, 22, 255);
+                    border: 2px solid rgb(166, 22, 255);
+                    margin: 0 5px;
                 }
-
-                .product-shampoo {
-                    position: absolute;
-                    max-width: 60%;
-                    height: auto;
-
-                    img {
-                        width: 100%;
+    
+                .active {
+                    box-shadow: none;
+                    transform: scale(1.5);
+    
+                    span {
+                        background: rgb(166, 22, 255);
+                        box-shadow: rgb(187, 78, 255);
+                        height: 12px;
+                        width: 12px;
+                        margin-bottom: -1px;
                     }
                 }
-
-                &.is-inview {
-                    opacity: 0;
-                    animation: fade-in-right ease 2.5s forwards;
-                }
             }
-
-            /*
-            .left {
+    
+            .card {
                 text-align: center;
+                background: #fff;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin: 0 20px;
+                border: 0;
+                height: 300px;
+                width: auto;
+
+                // Added to make images occupy 100% of the card
+                img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; // Maintains aspect ratio and covers the entire area       
+                }
 
                 .text {
                     width: 100%;
-                    margin: 0;
-                    padding: 30px 0;
-                    opacity: 0;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
 
-                    h3 {
-                        padding: 0 15px;
-                        color: rgba(128, 128, 128, 0.8);
+                    p {
+                        color: $font-pri-w;
                     }
                 }
-
-                .text.first.is-inview {
-                    opacity: 0;
-                    animation: fade-in-right-xl ease 2s forwards;
-                }
-
-                .text.second.is-inview {
-                    opacity: 0;
-                    animation: fade-in-left-xl ease 2s forwards;
-                }
-
-                .fa-duotone {
-                    margin-bottom: 20px;
-                    font-size: 5em;
-                    color: $color-pri;
-                }
-            } */
-        }
-    }
-
-    .gtco-testimonials {
-        position: relative;
-        margin-top: 30px;
-
-        h2 {
-            font-size: 35px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .owl-stage-outer {
-            padding: 30px 0;
-        }
-
-        .owl-nav {
-            display: none;
-        }
-
-        .owl-dots {
-            text-align: center;
-
-            span {
-                position: relative;
-                height: 10px;
-                width: 10px;
-                border-radius: 50%;
-                display: block;
-                background: #fff;
-                border: 2px solid $color-pri;
-                margin: 0 5px;
             }
-
+    
             .active {
-                box-shadow: none;
+                opacity: 0.5;
+                transition: all 0.3s;
+            }
+    
+            .center {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+    
+        .owl-carousel {
+            .owl-nav button {
 
-                span {
-                    background: $color-pri;
-                    box-shadow: none;
-                    height: 12px;
-                    width: 12px;
-                    margin-bottom: -1px;
+                &.owl-next,
+                &.owl-prev {
+                    outline: 0;
                 }
             }
-        }
-
-        .card {
-            text-align: center;
-            background: #fff;
-            box-shadow: 0 8px 30px -7px #c9dff0;
-            margin: 0 20px;
-            padding: 0 10px;
-            border-radius: 20px;
-            border: 0;
-            height: 300px;
-
-            .icon {
-                .fa-duotone {
-                    margin: 20px;
-                    font-size: 5em;
-                    color: $color-pri;
-                }
-            }
-
-            p {
-                font-size: 18px;
-                color: #555;
-                padding-bottom: 5px;
-            }
-        }
-
-        .active {
-            opacity: 0.5;
-            transition: all 0.3s;
-        }
-
-        .center {
-            opacity: 1;
-        }
-    }
-
-    @media (max-width: 767px) {
-        .gtco-testimonials {
-            margin-top: 20px;
-        }
-    }
-
-    .owl-carousel {
-        .owl-nav button {
-            &.owl-next,
-            &.owl-prev {
+    
+            button.owl-dot {
                 outline: 0;
             }
         }
 
-        button.owl-dot {
-            outline: 0;
+        .button-wrapper {
+            margin: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .murals-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(166, 22, 255);
+                /* Or use a specific shade like #8A2BE2 for deeper violet */
+                color: white;
+                /* Text color for contrast */
+                border: none;
+                border-radius: 25px;
+                width: 8em;
+                /* Adjust size as needed */
+                height: 3em;
+                /* Same as width for perfect circle */
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                /* Subtle shadow */
+                transition: all 0.3s ease;
+                /* Smooth hover transition */
+            }
+
+            .murals-button:hover {
+                background-color: #7A1FA2;
+                /* Darker violet on hover */
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+                /* Deeper shadow on hover */
+                transform: scale(1.05);
+                /* Slight enlargement for effect */
+            }
+
+            p {
+                color: $font-pri-w;
+            }
+        }
+
+}
+
+.block-4 {
+    margin: 3em;
+    background-color: rgb(35, 35, 35);
+    height: auto;
+
+    .container {
+        display: flex;
+        padding: 3em;
+    }
+
+    .title {
+        padding-right: 2em;
+        padding-bottom: 3em;
+    }
+
+    .title, .paints {
+        flex: 1; /* Each takes 50% of the container width */
+    }
+
+    .violet {
+        h1 {
+            -webkit-text-stroke: 0.03em $font-sec;
+            color: transparent;
+            text-decoration: underline;
+            text-decoration-thickness: 5px;
+            text-underline-offset: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .paints {
+        display: flex; /* Added to make it a flex container */
+        justify-content: center; /* Centers the image horizontally */
+        align-items: center; /* Optional: Centers vertically if needed, but image has fixed height */
+    }
+
+    .paints img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 100%;
+        height: 100%;
+        /* Maintains aspect ratio */
+    }
+
+    .paints img:hover {
+        opacity: 0.5;
+        transition: all 0.3s;
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+
+    .hover-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        pointer-events: none; /* So it doesn't interfere with clicks */   
+    }
+
+    .paints img:active {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+}
+
+.block-6 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; // Changed from margin to padding to avoid overflow
+
+    .reveal {
+        &.is-inview {
+            opacity: 0;
+            animation: pop 0.5s forwards;
+        }
+
+        ul {
+            list-style: none;
+            display: inline-block;
+        }
+
+        ul li {
+            width: 25px;
+            height: 25px;
+            margin: 8px 0;
+        }
+
+        ul li.one {
+            background: #0080FF;
+        }
+
+        ul li.two {
+            background: #0EA7A5;
+        }
+
+        ul li.three {
+            background: #50C878;
+        }
+
+        ul li.four {
+            background: #FFD700;
+        }
+
+        ul li.five {
+            background: #FA7A35;
+        }
+
+        ul li.six {
+            background: #E24666;
+        }
+
+        ul li.seven {
+            background: #B53389;
+        }
+
+        ul li.eight {
+            background: #708090;
+        }
+
+        ul li.nine {
+            background: #918E85;
+        }
+    }
+}
+/******************* INDEX CSS STYLE END ********************/
+
+/******************* MURALS SCSS STYLE START ********************/
+// Block-specific styles
+.block-murals {
+
+    .reveal {
+        &.is-inview {
+            opacity: 0;
+            animation: fade-in-right 2s ease forwards;
+        }
+
+        .main {
+            grid-column: main;
+            padding: 1.25rem;
+        }
+
+        // Photo Gallery
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+            grid-auto-rows: 12.5rem;
+            grid-auto-flow: dense;
+            gap: 0.75rem;
+        }
+
+        .gallery figure {
+            position: relative;
+            container: figure / inline-size; // Modern container query for responsive captions
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr); // Prevents grid blowout
+            grid-template-rows: minmax(0, 1fr);
+
+            .hover-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); // Centers the icon
+                color: #fff; // White color for visibility
+                font-size: 2rem; // Adjust size as needed
+                opacity: 0; // Hidden by default
+                transition: opacity 0.3s ease; // Smooth fade-in
+                z-index: 2; // Above the image but below figcaption if needed
+                pointer-events: none; // Prevents it from interfering with clicks
+            }
+
+            &:hover .hover-icon {
+                opacity: 1; // Shows the icon on hover       
+            }
+        }
+
+        .gallery img {
+            width: 100%; // Use standard width for better compatibility
+            height: 100%; // Use standard height for better compatibility
+            object-fit: cover;
+            grid-area: 1 / 1 / -1 / -1; // Covers the entire grid area
+            transition: transform 1s ease-in-out, opacity 1.2s ease; // Combined transitions for smoother effects
+        }
+
+        .gallery figure:hover img {
+            transform: scale(1.125); // Use transform for better performance
+            opacity: 0.5;
+        }
+
+        .gallery figcaption {
+            grid-area: 1 / 1 / -1 / -1;
+            align-self: end;
+            z-index: 1;
+            padding: 3em 15% 1em 1em;
+            color: #fff;
+            font-size: 0.875rem;
+            line-height: 1.3;
+            background: linear-gradient(transparent 5%, rgba(0, 0, 0, 1));
+            display: none; // Hidden by default, shown via container query
+        }
+
+        // Show captions on larger figures
+        @container figure (width > 10rem) {
+            .gallery figcaption {
+                display: block;
+            }
+        }
+
+        .gallery figcaption h3 {
+            font-size: 1.0625rem;
+        }
+
+        .gallery figcaption p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        // Enhanced grid layout for larger screens
+        @media (min-width: 600px) {
+            .gallery figure:nth-child(1) {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+
+            .gallery figure:nth-child(4n + 1) {
+                grid-row: span 2;
+            }
+
+            .gallery figure:nth-child(4n + 2) {
+                grid-column: span 2;
+            }
         }
     }
 }
 
-.block-4 {
-    height: 100vh;
+/* IMAGE VIEWER START */
+/* The Modal (background) */
+#image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
 }
+
+#image-viewer .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: 100%;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+#image-viewer .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#image-viewer .close:hover,
+#image-viewer .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+/* IMAGE VIEWER - END */
+
+/******************* MURALS SCSS STYLE END ********************/

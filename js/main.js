@@ -34,6 +34,58 @@ $(".menu").click(function(){
 });
 // ---------------------------------------------------------
 
+$(document).ready(function () {
+
+  /* IMAGE VIEWER */
+  // Fixed selector: Combine with comma inside the string
+  $(".gallery img").click(function () {
+    // Double click action: Show the full image
+    $("#full-image").attr("src", $(this).attr("src"));
+    $('#image-viewer').show();
+  });
+  $("#image-viewer .close").click(function () {
+    $('#image-viewer').hide();
+  });
+
+  $(document).on('click', '#image-viewer', function (e) {
+    if (e.target.id === 'image-viewer') {
+      $('#image-viewer .close').trigger('click');
+    }
+  });
+
+  // Soporte para ESC
+  $(document).on('keyup', function (e) {
+    if (e.key === "Escape") {
+      $('#image-viewer .close').trigger('click');
+    }
+  });
+  /* IMAGE VIEWER END */
+
+  /* VER CATALOGO ON HOVER */
+  $(".paints img").each(function () {
+    var img = $(this);
+    var overlay = $('<div class="hover-overlay"><p>VER CATÁLOGO</p></div>');
+
+    // Append overlay to the image's parent (e.g., a container div)
+    img.parent().css('position', 'relative').append(overlay);
+
+    // Hide overlay initially
+    overlay.hide();
+
+    // Show on hover
+    img.hover(
+      function () {
+        overlay.show();
+      },
+      function () {
+        overlay.hide();
+      }
+    );
+  });
+  /* VER CATALOGO END */
+
+});
+
 (function () {
   "use strict";
 
@@ -44,21 +96,16 @@ $(".menu").click(function(){
       margin: 0,
       autoplay: true,
       responsiveClass: true,
-      nav: false,
+      nav: true,
       responsive: {
         0: {
           items: 1,
+          nav: true
+        },
+        800: {
+          items: 3,
           nav: false
         },
-        680: {
-          items: 2,
-          nav: false,
-          loop: false
-        },
-        1000: {
-          items: 3,
-          nav: true
-        }
       }
     });
   };
@@ -67,6 +114,18 @@ $(".menu").click(function(){
     carousels();
   })(jQuery);
 })();
+
+document.querySelector('.violet-button').addEventListener('click', function () {
+  window.location.href = 'https://api.whatsapp.com/send?phone=5492645455759&text=%F0%9F%96%90%EF%B8%8F%20Hola!%20Te%20hablo%20a%20trav%C3%A9s%20de%20tu%20website!%20Tengo%20una%20consulta';
+});
+
+document.querySelector('.murals-button').addEventListener('click', function () {
+  window.location.href = 'murales.html';
+});
+
+document.querySelector('.paints').addEventListener('click', function () {
+  window.location.href = 'pinturas.html';
+});
 
 /*
 // Fixed with https://bobbyhadz.com/blog/javascript-getboundingclientrect-is-not-a-function

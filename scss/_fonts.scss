@@ -5,6 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@84.5,363;84.5,424;84.5,614&display=swap');
 
 @font-face {
+    font-family: AceSans;
+    src: url("../fonts/AceSans-FREE.otf") format("opentype");
+}
+
+@font-face {
     font-family: 'circula';
     /* src: url('out.eot'); /* IE9 Compat Modes */
     /* src: url('out.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -23,23 +28,23 @@ a {
 }
 
 a, p {
-    font-family: ttnorms;
+    font-family: AceSans;
 }
 
 p {
     font-size: $font-size;
     font-family: 'Anybody', cursive;
     font-weight: normal;
-    color: $font-pri;
+    color: $font-pri-w;
     line-height: 126%;
 }
 
 h1, h2, h3, h4 {
     font-weight: normal;
     text-transform: uppercase;
-    font-family: circula;
+    font-family: AceSans;
     line-height: 100%;
-    color: $font-pri;
+    color: $font-pri-w;
 }
 
 h1, h2 {

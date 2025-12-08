@@ -5,6 +5,7 @@
 // Colors
 $font-pri:            #222222;
 $font-pri-w:          #fff;
+$font-sec:            rgb(182, 66, 255);
 
 $color-pri:           #370063;
 // Base
@@ -21,6 +22,8 @@ $font-size-h2-s:        ($font-size-h2 - 0.5em);
 $font-size-h2-xs:       ($font-size-h2 - 1em);
 $font-size-h2-l:        ($font-size-h2 + 1em);
 $font-size-h2-xl:       ($font-size-h2 + 2em);
+
+$font-size-p-s:         (1em);
 
 // Breakpoints
 // =============================================================================
